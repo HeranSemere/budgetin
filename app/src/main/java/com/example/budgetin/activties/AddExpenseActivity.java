@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.budgetin.ExpensesActivity;
@@ -28,6 +29,7 @@ public class AddExpenseActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     String radioValue = null;
     DBHelper dbHelper;
+    TextView welcomeBanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,10 @@ public class AddExpenseActivity extends AppCompatActivity {
 
         radioGroup = findViewById(R.id.radioGroup);
         dbHelper = new DBHelper(AddExpenseActivity.this);
+
+        //welcomeBanner.findViewById(R.id.welcomeTextfield);
+
+        //welcomeBanner.setText("Welcome "+pref.getString("NAME", "to BudgetIn"));
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

@@ -32,12 +32,13 @@
             android:layout_width="match_parent" />
 
         <TextView
+            android:id="@+id/welcomeTextfield"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/italiana"
             android:paddingTop="5dp"
-            android:text="Welcome, John doe"
+            android:text="@string/expense_details"
             android:gravity="center_horizontal"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/darkBlue"
