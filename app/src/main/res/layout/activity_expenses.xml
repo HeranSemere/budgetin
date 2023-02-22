@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+android:id="@+id/expenseDrawerLayout"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/background"
+tools:context=".ExpensesActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <include
+            android:id="@+id/notificationsHeaderLayout"
+            layout="@layout/header_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="30dp"
+            android:text="Specific Category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/darkBlue"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="30dp"
+            android:text="Please enter your expenses"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:paddingTop="40dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/expenseRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:id="@+id/addExpenseBtn"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_shape"
+                android:shadowColor="@color/lightBlue"
+                android:text="@string/add"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/expenseNav"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:menu="@menu/menu"
+    android:backgroundTint="@color/darkBlue"
+    android:alpha="0.9"
+    android:layout_gravity="start"
+    android:paddingTop="40dp"
+    android:paddingLeft="30dp"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

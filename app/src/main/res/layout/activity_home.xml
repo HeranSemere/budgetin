@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/homeDrawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activties.HomeActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/notificationsHeaderLayout"
+                    layout="@layout/header_bar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/welcome_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/italiana"
+                        android:paddingTop="5dp"
+                        android:text="Welcome, John doe"
+                        android:gravity="center_horizontal"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="8">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Income"
+                                    android:textColor="@color/black"
+                                    style="@style/homeLabels"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Expense"
+                                    android:textColor="@color/black"
+                                    style="@style/homeLabels"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/incomeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="400 ETB"
+                                    android:textColor="@color/black"
+                                    style="@style/homeLabels"
+                                    />
+                                <TextView
+                                    android:id="@+id/expenseTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="300 ETB"
+                                    android:textColor="@color/black"
+                                    style="@style/homeLabels"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/categories"
+                            android:textColor="@color/black"
+                            style="@style/homeLabels"
+                            />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+
+                            android:id="@+id/imageRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardCornerRadius="8dp"
+                            android:layout_margin="5dp"
+                            android:elevation="10dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/roundedImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                android:background="@color/white"
+                                android:scaleType="centerCrop"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="3dp"
+                                android:text="Food 10%"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif-black"
+                                android:textColor="@color/white"
+                                android:background="@color/darkBlue"
+                                android:layout_gravity="bottom"
+                                />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/add_button"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/add"
+                        android:background="@drawable/rounded_border"
+                        android:padding="8dp" />
+                    <Space
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"/>
+                    <ImageButton
+
+                        android:id="@+id/minus_button"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/remove"
+                        android:background="@drawable/rounded_border"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="20dp"
+                    android:autofillHints="User Name"
+                    android:background="@drawable/text_box"
+                    android:hint="@string/userNameHint"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:textColorHint="#515151"
+                    android:textColorLink="@color/lightBlue"
+
+                    />
+
+                <Button
+                    android:id="@+id/nextBtnHome"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/btn_shape"
+                    android:shadowColor="@color/lightBlue"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/homeNav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/menu"
+        android:backgroundTint="@color/darkBlue"
+        android:alpha="0.9"
+        android:layout_gravity="start"
+        android:paddingTop="40dp"
+        android:paddingLeft="30dp"/>
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

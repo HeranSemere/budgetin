@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">BudgetIn</string>
+    <string name="userName">Username</string>
+    <string name="password">Password</string>
+    <string name="userNameHint">Enter your username</string>
+    <string name="passwordHint">Enter your password</string>
+    <string name="remember">Remember Me</string>
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="conPsd">Confirm Password</string>
+    <string name="edit">Edit</string>
+    <string name="enterExpense">Enter Expense</string>
+    <string name="food">Food</string>
+    <string name="school">School Purposes</string>
+    <string name="clothes">Clothes</string>
+    <string name="goOut">Go Out</string>
+    <string name="transport">Transport</string>
+    <string name="other">Others</string>
+    <string name="submit">Submit</string>
+    <string name="enterMonth">Enter Month</string>
+    <string name="back">Back</string>
+    <string name="add">Add</string>
+    <string name="error_field_required">This field id required</string>
+    <string name="already_have_an_account">Already have an account? </string>
+    <string name="sign_in">Sign In</string>
+    <string name="categories">Categories</string>
+    <string name="next">Next</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="income">Income</string>
+    <string name="save">Save</string>
+    <string name="sign_up">Sign up</string>
+</resources>
